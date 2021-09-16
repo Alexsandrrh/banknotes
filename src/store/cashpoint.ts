@@ -65,7 +65,7 @@ class Cashpoint {
       }));
   }
 
-  getBanknotes = (amount: number) => {
+  getBanknotes = (amount: number): ILimits | undefined => {
     if (amount === this.totalAmount) {
       this.nominals.map((n) => (this.limits[n] = 0));
     } else {

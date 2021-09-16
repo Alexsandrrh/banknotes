@@ -1,8 +1,9 @@
 import { makeObservable, observable, computed, action } from "mobx";
+import { ILimits, IBanknote } from "./cashpoint";
 
 class User {
   debitAmount: number = 7900000;
-  walletBanknotes: { [key: number]: number } = {
+  walletBanknotes: ILimits = {
     2000: 1,
     1000: 4,
     100: 2,
@@ -18,7 +19,7 @@ class User {
     });
   }
 
-  get walletBanknotesList() {
+  get walletBanknotesList(): IBanknote[] {
     return Object.keys(this.walletBanknotes)
       .map(Number)
       .sort((a, b) => a - b)
@@ -28,7 +29,7 @@ class User {
       }));
   }
 
-  addBanknotes(banknotes: { [key: number]: number }) {
+  addBanknotes(banknotes: ILimits) {
     Object.keys(banknotes)
       .map(Number)
       .forEach((nominal) => {
@@ -42,7 +43,7 @@ class User {
       });
   }
 
-  getBanknotes(banknotes: { [key: number]: number }) {
+  getBanknotes(banknotes: ILimits) {
     Object.keys(banknotes)
       .map(Number)
       .forEach((nominal) => {
