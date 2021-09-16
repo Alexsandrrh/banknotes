@@ -1,0 +1,16 @@
+.view {
+  display: flex;
+  flex-flow: column-reverse;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+@media screen and (min-width: 480px) {
+  .view {
+    flex-flow: column;
+    justify-content: center;
+  }
+}

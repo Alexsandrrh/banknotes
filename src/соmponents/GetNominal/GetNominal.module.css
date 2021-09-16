@@ -1,0 +1,29 @@
+.block {
+  composes: block from "../UserAccount/UserAccount.module.css";
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.amountInput,
+.quickAmount {
+  margin-bottom: 15px;
+}
+
+.quickAmount {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 15px;
+}

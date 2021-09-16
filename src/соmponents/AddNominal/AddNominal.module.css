@@ -1,0 +1,31 @@
+.block {
+  composes: block from "../UserAccount/UserAccount.module.css";
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.nominals,
+.amount {
+  margin-bottom: 25px;
+}
+
+.input:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.amount .name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 8px;
+}
