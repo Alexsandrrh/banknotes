@@ -59,7 +59,12 @@ const AddNominals: FC<Props> = ({ user, cashpoint }): ReactElement => {
         <span className={styles.name}>Итог:</span>
         <Amount value={amountOfValues} currency="RUB" minority={1} />
       </div>
-      <Button block view="primary" onClick={handleSubmit}>
+      <Button
+        block
+        view="primary"
+        onClick={handleSubmit}
+        disabled={!amountOfValues}
+      >
         Пополнить
       </Button>
     </div>
